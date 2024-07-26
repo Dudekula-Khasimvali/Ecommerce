@@ -1,0 +1,25 @@
+.card
+{
+    border: 1px solid gray;
+    width:170px;
+    text-align: center;
+    padding : 5px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    float: left;
+    height: 270px;
+}
+
+.prdName
+{
+    color :  Green;
+    font-weight: bold;
+    text-decoration: underline;    
+}
+
+.prdPrice
+{
+    color : red;
+    font-size : 20px;
+}

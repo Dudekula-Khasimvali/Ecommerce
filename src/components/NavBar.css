@@ -1,0 +1,30 @@
+.navbar-nav {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    width: 100%;
+  }
+  
+  .nav-item {
+    margin: 0 10px; /* Adjust the margin as needed */
+  }
+  
+  .navbar-brand {
+    margin-right: 20px; /* Space between brand and nav items */
+  }
+  
+  .nav-link {
+    color: #fff; /* Ensure text color is visible */
+  }
+  
+  .nav-link:hover {
+    color: #ccc; /* Optional: Change color on hover */
+  }
+  
+  .dropdown-menu .dropdown-item {
+    color: #000; /* Ensure dropdown items are visible */
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa; /* Optional: Change background on hover */
+  }
+  

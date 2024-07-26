@@ -1,0 +1,165 @@
+{
+  "products": [
+    {
+      "productName": "SAMSUNG Galaxy S24 Ultra 5G ",
+      "category": "Mobile",
+      "description": "(Titanium Gray, 512 GB)  (12 GB RAM)",
+      "unitPrice": 150000,
+      "productImage": "/images/Samsung.jpg",
+      "id": 1
+    },
+    {
+      "productName": "Samsung Galaxy Z Fold 4",
+      "category": "Mobile",
+      "description": "New One",
+      "unitPrice": 1750000,
+      "productImage": "https://i2-prod.irishmirror.ie/incoming/article28308741.ece/ALTERNATES/s615/5_product_galaxy_zfold4_graygreen_spen-1.jpg",
+      "id": 6
+    },
+    {
+      "productName": "MIVI Gaming Earbuds",
+      "category": "Earbuds",
+      "description": "Fully Gaming Mode",
+      "unitPrice": 2000,
+      "productImage": "https://www.mivi.in/cdn/shop/files/CommandoX9-Black.png?v=1707971018&width=1100",
+      "id": 2
+    },
+    {
+      "productName": "boAt Airdopes 190 in Ear TWS Earbuds ",
+      "category": "Earbuds",
+      "description": "Fully Gaming Mode",
+      "unitPrice": 1299,
+      "productImage": "https://m.media-amazon.com/images/I/71Wh4yeMtRL._SX679_.jpg",
+      "id": 3
+    },
+    {
+      "productName": "TECNO Pova 5 Pro 5G ",
+      "category": "Gaming",
+      "description": "(Dark Illusion, 8GB RAM,256GB Storage)",
+      "unitPrice": 15999,
+      "productImage": "https://m.media-amazon.com/images/I/51+9BXuyUpL._SX679_.jpg",
+      "id": 4
+    },
+    {
+      "productName": "iQOO Neo9 Pro 5G (Gaming)",
+      "category": "Gaming",
+      "description": "(Fiery Red, 12GB RAM, 256GB Storage)",
+      "unitPrice": 38999,
+      "productImage": "https://m.media-amazon.com/images/I/718jcIFYaAL._SX679_.jpg",
+      "id": 5
+    },
+    {
+      "productName": "Samsung Galaxy A35 5G",
+      "category": "Mobile",
+      "description": "Awesome Iceblue, 8GB RAM, 128GB Storage",
+      "unitPrice": 28000,
+      "productImage": "https://m.media-amazon.com/images/I/71W2DOvZ1DL._SX679_.jpg",
+      "id": 7
+    },
+    {
+      "productName": "Samsung Galaxy Z Flip4 5G",
+      "category": "Mobile",
+      "description": "Bora Purple, 8GB RAM, 128GB Storage",
+      "unitPrice": 61999,
+      "productImage": "https://m.media-amazon.com/images/I/61vZSG1KuoL._SX679_.jpg",
+      "id": 8
+    },
+    {
+      "productName": "Samsung Galaxy S21 FE 5G",
+      "category": "Mobile",
+      "description": "(8GB 256GB Olive) with Snapdragon 888",
+      "unitPrice": 32990,
+      "productImage": "https://m.media-amazon.com/images/I/71nj3tkXZXL._SX569_.jpg",
+      "id": 9
+    },
+    {
+      "productName": "BL Wave Beam in-Ear Wireless Earbuds",
+      "category": "Earbuds\t",
+      "description": "Water&Dust Resistance,Ambient Aware&Talk",
+      "unitPrice": 3498,
+      "productImage": "https://m.media-amazon.com/images/I/61p1-gm4RwL._SX522_.jpg",
+      "id": 10
+    },
+    {
+      "productName": "Boult UFO Gaming Earbuds",
+      "category": "Earbuds",
+      "description": "45ms Low Latency Gaming, 4 Mics ENC, Breathing LEDs, 13mm Bass Drivers Ear Buds TWS",
+      "unitPrice": 1499,
+      "productImage": "https://m.media-amazon.com/images/I/61P0akAiT-L._SX522_.jpg",
+      "id": 11
+    },
+    {
+      "productName": "pTron Basspods Torq TWS Earbuds",
+      "category": "Earbuds",
+      "description": "40ms Low Latency Gaming, TruTalk AI-ENC Calls, 40H Playtime, HD Mics, in-Ear Bluetooth 5.3",
+      "unitPrice": 698,
+      "productImage": "https://m.media-amazon.com/images/I/519gYhOqCLL._SX679_.jpg",
+      "id": 12
+    },
+    {
+      "productName": "SAMSUNG M5 Smart TV",
+      "category": "TV",
+      "description": "68.6 cm (27 inch) Full HD VA Panel LED Ultra Wide Smart Monitor",
+      "unitPrice": 15999,
+      "productImage": "https://th.bing.com/th/id/OIP.kmqVJZmvx6Mecew8hTghZQAAAA?rs=1&pid=ImgDetMain",
+      "id": 13
+    },
+    {
+      "productName": "Samsung 4K Vision Pro Smart LED TV",
+      "category": "TV",
+      "description": "138 cm (55 Inches) ",
+      "unitPrice": 99999,
+      "productImage": "https://th.bing.com/th?id=OPAC.vCxgGnddvS2HkQ474C474&w=592&h=550&o=5&dpr=1.3&pid=21.1",
+      "id": 14
+    },
+    {
+      "productName": "Samsung Galaxy Watch4 Classic",
+      "category": "Watch",
+      "description": "(4.2 cm, Silver, Compatible with Android Only)",
+      "unitPrice": 15999,
+      "productImage": "https://m.media-amazon.com/images/I/710RKMDIJaL._SX679_.jpg",
+      "id": 15
+    },
+    {
+      "productName": "for Galaxy S22 Ultra Stylus Pen",
+      "category": "Pen",
+      "description": "Stylus Pen Touch Pen Without Bluetooth (Silver)",
+      "unitPrice": 2789,
+      "productImage": "https://m.media-amazon.com/images/I/41V3A8C-84L._SX679_.jpg",
+      "id": 16
+    }
+  ],
+  "cart": [
+    {
+      "productName": "MIVI Gaming Earbuds",
+      "unitPrice": 2000,
+      "quantity": 2,
+      "total": 4000,
+      "userId": "khasim",
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "orderDate": "2024-04-05T10:23:10.268Z",
+      "totalAmount": 2598,
+      "id": 1
+    },
+    {
+      "orderDate": "2024-05-25T19:00:53.751Z",
+      "totalAmount": 2000,
+      "id": 2
+    },
+    {
+      "orderDate": "2024-05-31T15:59:27.961Z",
+      "totalAmount": 2000,
+      "id": 3
+    },
+    {
+      "orderDate": "2024-07-19T10:47:21.099Z",
+      "totalAmount": 4000,
+      "id": 4
+    }
+  ],
+  "users": []
+}

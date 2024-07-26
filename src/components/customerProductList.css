@@ -1,0 +1,58 @@
+.productCard {
+    border: 1px solid gray;
+    width: 170px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    float: left;
+    height: 250px;
+    position: relative; /* Necessary for positioning the popup */
+    overflow: hidden; /* Hide overflow content */
+    transition: transform 0.3s; /* Smooth transition for the popup */
+}
+
+.prdName {
+    color: Green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.prdPrice {
+    color: red;
+    font-size: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    margin-right: 10px; /* Adjust spacing between cards */
+}
+
+.productCard:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    z-index: 10; /* Ensure the hovered card is on top */
+}
+
+.popup {
+    display: none; /* Hide popup by default */
+    position: absolute;
+    top: 100%; /* Position below the product card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.productCard:hover .popup {
+    display: block; /* Show popup on hover */
+}
