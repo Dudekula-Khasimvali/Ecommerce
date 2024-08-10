@@ -1,58 +1,203 @@
+/* General styling for product card */
 .productCard {
-    border: 1px solid gray;
-    width: 170px;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px black;
-    float: left;
-    height: 250px;
-    position: relative; /* Necessary for positioning the popup */
-    overflow: hidden; /* Hide overflow content */
-    transition: transform 0.3s; /* Smooth transition for the popup */
+  border: 1px solid gray;
+  width: 170px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  float: left;
+  height: 250px;
+  position: relative; /* Necessary for positioning the popup */
+  overflow: hidden; /* Hide overflow content */
+  transition: transform 0.3s; /* Smooth transition for the popup */
 }
 
+/* Product name styling */
 .prdName {
-    color: Green;
-    font-weight: bold;
-    text-decoration: none;
+  color: Green;
+  font-weight: bold;
+  text-decoration: none;
 }
 
+/* Product price styling */
 .prdPrice {
-    color: red;
-    font-size: 20px;
+  color: red;
+  font-size: 20px;
 }
 
+/* Container for all products */
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Adjust spacing between cards */
 .product-card {
-    margin-right: 10px; /* Adjust spacing between cards */
+  margin-right: 10px;
 }
 
+/* Product card hover effect */
 .productCard:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
-    z-index: 10; /* Ensure the hovered card is on top */
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  z-index: 10; /* Ensure the hovered card is on top */
 }
 
+/* Popup styling */
 .popup {
-    display: none; /* Hide popup by default */
-    position: absolute;
-    top: 100%; /* Position below the product card */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    padding: 10px;
-    border: 1px solid gray;
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+  display: none; /* Hide popup by default */
+  position: absolute;
+  top: 100%; /* Position below the product card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
+/* Show popup on hover */
 .productCard:hover .popup {
-    display: block; /* Show popup on hover */
+  display: block;
+}
+
+/* Category container styling */
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Individual category item styling */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 30%;
+}
+
+/* Category link styling */
+.category-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Category image styling */
+.category-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Category link text styling */
+.category-link span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Styles for the navigation items */
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+/* Dropdown container styling */
+.dropdown-large {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 180px; /* Add space between items */
+}
+
+/* Individual dropdown item styling */
+.dropdown-item {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  width: 120px; /* Adjust width to make items smaller */
+}
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Category image styling within dropdown */
+.category-image {
+  display: block;
+  width: 60px; /* Adjust size to make images smaller */
+  height: auto;
+  margin: 0 auto 10px;
+  background-color: #fbe9e7;
+  padding: 8px; /* Adjust padding if necessary */
+  border-radius: 50%;
+}
+
+/* Ensure images scale properly */
+.dropdown-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Text styling within dropdown items */
+.dropdown-item span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .productCard {
+      width: 45%;
+      margin: 5px;
+  }
+
+  .dropdown-large {
+      flex-wrap: wrap;
+      gap: 50px; /* Adjust spacing for smaller screens */
+  }
+
+  .dropdown-item {
+      width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+      width: 100%;
+      margin: 5px 0;
+  }
+
+  .dropdown-large {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Adjust spacing for mobile screens */
+  }
+
+  .dropdown-item {
+      width: 80px;
+  }
+
+  .category-image {
+      width: 40px;
+      padding: 5px;
+  }
+
+  .category-link span,
+  .dropdown-item span {
+      font-size: 12px;
+  }
 }

@@ -18,7 +18,7 @@
     },
     {
       "productName": "MIVI Gaming Earbuds",
-      "category": "Earbuds",
+      "category": "Electronics",
       "description": "Fully Gaming Mode",
       "unitPrice": 2000,
       "productImage": "https://www.mivi.in/cdn/shop/files/CommandoX9-Black.png?v=1707971018&width=1100",
@@ -26,7 +26,7 @@
     },
     {
       "productName": "boAt Airdopes 190 in Ear TWS Earbuds ",
-      "category": "Earbuds",
+      "category": "Electronics",
       "description": "Fully Gaming Mode",
       "unitPrice": 1299,
       "productImage": "https://m.media-amazon.com/images/I/71Wh4yeMtRL._SX679_.jpg",
@@ -34,19 +34,11 @@
     },
     {
       "productName": "TECNO Pova 5 Pro 5G ",
-      "category": "Gaming",
+      "category": "Mobile",
       "description": "(Dark Illusion, 8GB RAM,256GB Storage)",
       "unitPrice": 15999,
       "productImage": "https://m.media-amazon.com/images/I/51+9BXuyUpL._SX679_.jpg",
       "id": "4"
-    },
-    {
-      "productName": "iQOO Neo9 Pro 5G (Gaming)",
-      "category": "Gaming",
-      "description": "(Fiery Red, 12GB RAM, 256GB Storage)",
-      "unitPrice": 38999,
-      "productImage": "https://m.media-amazon.com/images/I/718jcIFYaAL._SX679_.jpg",
-      "id": "5"
     },
     {
       "productName": "Samsung Galaxy A35 5G",
@@ -74,7 +66,7 @@
     },
     {
       "productName": "BL Wave Beam in-Ear Wireless Earbuds",
-      "category": "Earbuds\t",
+      "category": "Electronics",
       "description": "Water&Dust Resistance,Ambient Aware&Talk",
       "unitPrice": 3498,
       "productImage": "https://m.media-amazon.com/images/I/61p1-gm4RwL._SX522_.jpg",
@@ -82,7 +74,7 @@
     },
     {
       "productName": "Boult UFO Gaming Earbuds",
-      "category": "Earbuds",
+      "category": "Electronics",
       "description": "45ms Low Latency Gaming, 4 Mics ENC, Breathing LEDs, 13mm Bass Drivers Ear Buds TWS",
       "unitPrice": 1499,
       "productImage": "https://m.media-amazon.com/images/I/61P0akAiT-L._SX522_.jpg",
@@ -90,7 +82,7 @@
     },
     {
       "productName": "pTron Basspods Torq TWS Earbuds",
-      "category": "Earbuds",
+      "category": "Electronics",
       "description": "40ms Low Latency Gaming, TruTalk AI-ENC Calls, 40H Playtime, HD Mics, in-Ear Bluetooth 5.3",
       "unitPrice": 698,
       "productImage": "https://m.media-amazon.com/images/I/519gYhOqCLL._SX679_.jpg",
@@ -114,14 +106,14 @@
     },
     {
       "productName": "Samsung Galaxy Watch4 Classic",
-      "category": "Watch",
+      "category": "Electronics",
       "description": "(4.2 cm, Silver, Compatible with Android Only)",
       "unitPrice": 15999,
       "productImage": "https://m.media-amazon.com/images/I/710RKMDIJaL._SX679_.jpg",
       "id": "15"
     },
     {
-      "productName": "for Galaxy S22 Ultra Stylus Pen",
+      "productName": "Galaxy S22 Ultra Stylus Pen",
       "category": "Pen",
       "description": "Stylus Pen Touch Pen Without Bluetooth (Silver)",
       "unitPrice": 2789,
@@ -131,7 +123,7 @@
     {
       "id": "17",
       "productName": "Samsung Galaxy Watch Ultra ",
-      "category": "Watch",
+      "category": "Electronics",
       "description": "(47mm, LTE, Gray) with Upto 100h battery",
       "unitPrice": 59999,
       "productImage": "https://m.media-amazon.com/images/I/81i1Vn-KQuL._SX679_.jpg"
@@ -139,7 +131,7 @@
     {
       "id": "18",
       "productName": "Samsung Galaxy Watch4 LTE",
-      "category": "watch",
+      "category": "Electronics",
       "description": "40mm, Pink Gold, Compatible with Android only",
       "unitPrice": 13762,
       "productImage": "https://m.media-amazon.com/images/I/61NyGFgYV0L._SX679_.jpg"
@@ -159,30 +151,221 @@
       "description": "Rechargeable Pen",
       "unitPrice": 1399,
       "productImage": "https://m.media-amazon.com/images/I/51LixKhhaNL._AC_UY327_FMwebp_QL65_.jpg"
+    },
+    {
+      "productName": "Samsung Galaxy Book2 Pro 360",
+      "category": "Electronics",
+      "description": "OLED display",
+      "unitPrice": "83450",
+      "productImage": "https://www.notebookcheck.net/fileadmin/Notebooks/Samsung/Galaxy_Book2_Pro_360_13_NP930QED-KA3DE/4zu3_Samsung_GalaxyBook_2_Pro_360.jpg",
+      "id": "d97b"
+    },
+    {
+      "productName": "Samsung Galaxy Book3 Core i7 13G",
+      "category": "Electronics",
+      "description": "(16 GB/512 GB SSD/Windows 11 Home)",
+      "unitPrice": "74990",
+      "productImage": "https://m.media-amazon.com/images/I/816fTYVn5lL._SX679_.jpg",
+      "id": "409c"
+    },
+    {
+      "id": "8679",
+      "productName": "samsung-notebook-9-pro-2-in-1",
+      "category": "Electronics",
+      "description": "3-touch-screen-laptop-intel-core-i7-16gb-memory-512gb",
+      "unitPrice": "97864",
+      "productImage": "https://th.bing.com/th/id/OIP.iWovaDNhjNgH64th_A2IPgAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+      "productName": "Samsung Double Door Refrigerator",
+      "category": "TV",
+      "description": "(RT28C3733S8/HL, Silver, Elegant Inox, 2024 Model)",
+      "unitPrice": "26490",
+      "productImage": "https://m.media-amazon.com/images/I/61ZX+36YjmL._SY679_.jpg",
+      "id": "0be2"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "56e6",
+      "productName": "TECNO Pova 5 Pro 5G ",
+      "productImage": "https://m.media-amazon.com/images/I/51+9BXuyUpL._SX679_.jpg",
+      "unitPrice": 15999,
+      "quantity": 2,
+      "total": 31998,
+      "userId": "khasim"
+    },
+    {
+      "id": "26f1",
+      "productName": "TECNO Pova 5 Pro 5G ",
+      "productImage": "https://m.media-amazon.com/images/I/51+9BXuyUpL._SX679_.jpg",
+      "unitPrice": 15999,
+      "quantity": 1,
+      "total": 15999,
+      "userId": "vk61460@gmail.com"
+    }
+  ],
   "orders": [
     {
-      "orderDate": "2024-04-05T10:23:10.268Z",
-      "totalAmount": 2598,
-      "id": "1"
+      "id": "019f",
+      "orderDate": "2024-08-07T19:07:20.608Z",
+      "totalAmount": 2849,
+      "address": {
+        "addressLine1": "Nikarampalli",
+        "addressLine2": "AndharaPradesh",
+        "state": "AndhraPradesh",
+        "pincode": "523329",
+        "buildingNameNumber": "321",
+        "streetName": "Nikarampalli"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "8b39",
+          "quantity": 1,
+          "unitPrice": 2849
+        }
+      ]
     },
     {
-      "orderDate": "2024-05-25T19:00:53.751Z",
-      "totalAmount": 2000,
-      "id": "2"
+      "id": "41b5",
+      "orderDate": "2024-08-07T19:09:37.659Z",
+      "totalAmount": 2849,
+      "address": {
+        "addressLine1": "H no 54",
+        "addressLine2": "Ghass mandi",
+        "state": "UTTAR PRADESH",
+        "pincode": "251001",
+        "buildingNameNumber": "",
+        "streetName": "MUZAFFARNAGAR"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "5307",
+          "quantity": 1,
+          "unitPrice": 2849
+        }
+      ]
     },
     {
-      "orderDate": "2024-05-31T15:59:27.961Z",
-      "totalAmount": 2000,
-      "id": "3"
+      "id": "b3ee",
+      "orderDate": "2024-08-08T11:36:42.508Z",
+      "totalAmount": 6996,
+      "address": {
+        "addressLine1": "",
+        "addressLine2": "",
+        "state": "",
+        "pincode": "",
+        "buildingNameNumber": "",
+        "streetName": ""
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "7f93",
+          "quantity": 2,
+          "unitPrice": 3498
+        }
+      ]
     },
     {
-      "orderDate": "2024-07-19T10:47:21.099Z",
-      "totalAmount": 4000,
-      "id": "4"
+      "id": "ac37",
+      "orderDate": "2024-08-08T13:47:51.785Z",
+      "totalAmount": 31378,
+      "address": {
+        "addressLine1": "Hyderabad",
+        "addressLine2": "Ameerpet",
+        "state": "Telangana",
+        "pincode": "500016",
+        "buildingNameNumber": "151-61",
+        "streetName": "aaa mall"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "56e6",
+          "quantity": 2,
+          "unitPrice": 31998
+        }
+      ]
+    },
+    {
+      "id": "bfe4",
+      "orderDate": "2024-08-08T18:33:35.305Z",
+      "totalAmount": 15379,
+      "address": {
+        "addressLine1": "Nikarampalli",
+        "addressLine2": "AndharaPradesh",
+        "state": "AndhraPradesh",
+        "pincode": "523329",
+        "buildingNameNumber": "151",
+        "streetName": "Nikarampalli"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "26f1",
+          "quantity": 1,
+          "unitPrice": 15999
+        }
+      ]
+    },
+    {
+      "id": "23da",
+      "orderDate": "2024-08-08T18:48:13.015Z",
+      "totalAmount": 15379,
+      "address": {
+        "addressLine1": "H no 54",
+        "addressLine2": "Ghass mandi",
+        "state": "UTTAR PRADESH",
+        "pincode": "251001",
+        "buildingNameNumber": "",
+        "streetName": "MUZAFFARNAGAR"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "26f1",
+          "quantity": 1,
+          "unitPrice": 15999
+        }
+      ]
+    },
+    {
+      "id": "df87",
+      "orderDate": "2024-08-09T09:50:25.522Z",
+      "totalAmount": 15379,
+      "address": {
+        "addressLine1": "Nikarampalli",
+        "addressLine2": "AndharaPradesh",
+        "state": "AndhraPradesh",
+        "pincode": "523329",
+        "buildingNameNumber": "564",
+        "streetName": "Nikarampalli"
+      },
+      "paymentMethod": "Cash On Delivery",
+      "items": [
+        {
+          "productId": "26f1",
+          "quantity": 1,
+          "unitPrice": 15999
+        }
+      ]
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": "3605",
+      "email": "kv61460@gmail.com",
+      "phone": "6304110024",
+      "password": "kv61460"
+    },
+    {
+      "id": "3d16",
+      "email": "vk61460@gmail.com",
+      "phone": "6304110024",
+      "password": "vamshi@123"
+    }
+  ]
 }

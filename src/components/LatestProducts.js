@@ -18,22 +18,30 @@ function LatestProducts() {
         });
     }
 
-    let resultArray = latestProducts.map((item, index) =>
-        <div className="product-card" key={index}>
-            <div className="card" style={{textAlign:"center"}}>
-               <div style={{paddingRight:'5%'}}> <img   src={item.productImage} height={100} width="100" /> </div>
-                <br />
-                <span className="prdName">{item.productName}</span>  <br />
-                <span className="prdPrice"> ₹ {item.unitPrice.toFixed(2)}</span>
-                <br />
-                <Link to={"/ProductDetails/" + item.id}>
-                    <button className="btn btn-info" style={{ fontSize: '12px', padding: '5px 10px' }}>
-                        View Details
-                    </button>
-                </Link>
+    let resultArray = latestProducts.map((item, index) => {
+        // Handle the case where unitPrice might not be a number
+        const unitPrice = parseFloat(item.unitPrice);
+        const formattedPrice = isNaN(unitPrice) ? "N/A" : `₹ ${unitPrice.toFixed(2)}`;
+
+        return (
+            <div className="product-card" key={index}>
+                <div className="card" style={{ textAlign: "center" }}>
+                    <div style={{ paddingRight: '5%' }}>
+                        <img src={item.productImage} alt={item.productName} height={100} width="100" />
+                    </div>
+                    <br />
+                    <span className="prdName">{item.productName}</span> <br />
+                    <span className="prdPrice">{formattedPrice}</span>
+                    <br />
+                    <Link to={"/ProductDetails/" + item.id}>
+                        <button className="btn btn-info" style={{ fontSize: '12px', padding: '5px 10px' }}>
+                            View Details
+                        </button>
+                    </Link>
+                </div>
             </div>
-        </div>
-    );
+        );
+    });
 
     return (
         <div className="product-container">

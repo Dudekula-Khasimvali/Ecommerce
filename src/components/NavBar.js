@@ -34,8 +34,11 @@ function NavBar() {
             <li className="nav-item">      
               <Link className="nav-link" to="/ShoppingCart">Cart</Link>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="/" id="navbardrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           
+
+            
+            {/* <li className="nav-item ">
+              <a className="nav-link dropdown-toggle" href="/catogiry" id="navbardrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
               </a>
               <div className="dropdown-menu" aria-labelledby="navbardrop">       
@@ -46,7 +49,7 @@ function NavBar() {
                 <Link className="dropdown-item" to="/ProductByCategory/Watch">Watch</Link>
                 <Link className="dropdown-item" to="/ProductByCategory/Pen">Pen</Link>
               </div>   
-            </li>
+            </li> */}
           </ul>
         </div>  
       </nav> 

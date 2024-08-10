@@ -8,25 +8,32 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  function loginClick() {
-    if (!uname || !password) {
-      toast.error("Please enter all the fields");
-      return;
-    }
+  async function loginClick() {
+    if (!uname && !password) {
+      toast.error("Please enter all the fields", { position: "top-center" });
+    } else if (!uname) {
+      toast.error("Please enter UserName", { position: "top-center" });
+    } else if (!password) {
+      toast.error("Please enter password", { position: "top-center" });
+    } else {
+      try {
+        const response = await fetch(`http://localhost:3500/users?email=${uname}&password=${password}`);
+        const data = await response.json();
 
-    if (uname !== "khasim") {
-      toast.error("User Not Found");
-      return;
+        if (data.length === 0) {
+          toast.error("User Not Found or Incorrect Password", { position: "top-center" });
+        } else {
+          sessionStorage.setItem("USER_ID", data[0].email); // or data[0].id if you have a unique ID
+          toast.success("Login successful", { position: "top-center" });
+          setTimeout(() => {
+            navigate("/");
+          }, 1500);
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        toast.error("An error occurred. Please try again.", { position: "top-center" });
+      }
     }
-
-    if (password !== "khasim@143") {
-      toast.error("Incorrect Password");
-      return;
-    }
-
-    sessionStorage.setItem("USER_ID", uname);
-    toast.success("Login successful");
-    navigate("/");
   }
 
   return (
@@ -58,8 +65,8 @@ function Login() {
           Login
         </button>
         <div style={{justifyContent:'space-between' , display:'flex'}}>
-        <Link style={{textDecoration:'none' , color:'black' , fontWeight:'bold'}} to={"/rigister"}>Don't Have Account ?</Link>
-        <Link style={{textDecoration:'none' , color:'black' , fontWeight:'bold' }} to={"/rigister"}>Forgott Password ?</Link>
+          <Link style={{textDecoration:'none' , color:'black' , fontWeight:'bold'}} to={"/rigister"}>Don't Have Account?</Link>
+          <Link style={{textDecoration:'none' , color:'black' , fontWeight:'bold' }} to={"/forpsw"}>Forgot Password?</Link>
         </div>
         <ToastContainer />
       </div>

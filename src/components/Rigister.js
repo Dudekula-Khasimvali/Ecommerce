@@ -2,76 +2,100 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
-  // const validateEmail = (email) => {
-  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //   return regex.test(email);
-  // };
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
 
-  // const validatePhone = (phone) => {
-  //   const regex = /^\d{10}$/; // Example for 10-digit phone number
-  //   return regex.test(phone);
-  // };
+  const validatePhone = (phone) => {
+    const re = /^\d{10}$/;
+    return re.test(phone);
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // // Validate email
-    // if (!validateEmail(email)) {
-    //   toast.error('Please enter a valid email address.');
-    //   return;
-    // }
-    // else{
-    //   toast.success('Email is valid.');
-    // }
-
-    //Valid Email
-    if (email.trim("")) {
-      toast.error('Please enter email.');
+    if (!email && !phone && !password && !confirmPassword) {
+      toast.error('Please fill in all the fields.', { position: "top-center" });
       return;
     }
 
-    // Validate phone number
-    // if (!validatePhone(phone)) {
-    //   toast.error('Please enter a valid phone number (10 digits).');
-    //   return;
-    // }
-    // else{
-    //   toast.success('Phone number is valid.');
-    // }
-
-    
-
-    // Validate password
-    if (password.length < 6) {
-      toast.error('Password must be at least 6 characters long.');
+    if (!email) {
+      toast.error('Please enter your email.', { position: "top-center" });
       return;
-    }else{
-      toast.success('Password is valid.');
+    } else if (!validateEmail(email)) {
+      toast.error('Please enter a valid email address.', { position: "top-center" });
+      return;
     }
 
-    // Confirm password
-    if (password !== confirmPassword) {
-      toast.error('Passwords do not match.');
+    if (!phone) {
+      toast.error('Please enter your phone number.', { position: "top-center" });
       return;
-    }else{
-      toast.success('Passwords match.');
+    } else if (!validatePhone(phone)) {
+      toast.error('Please enter a valid phone number (10 digits).', { position: "top-center" });
+      return;
     }
 
-    // Handle successful form submission
-    toast.success('Registration successful!');
-    // Reset the form fields
-    setEmail('');
-    setPhone('');
-    setPassword('');
-    setConfirmPassword('');
+    if (!password) {
+      toast.error('Please enter your password.', { position: "top-center" });
+      return;
+    } else if (password.length < 6) {
+      toast.error('Password must be at least 6 characters long.', { position: "top-center" });
+      return;
+    }
+
+    if (!confirmPassword) {
+      toast.error('Please confirm your password.', { position: "top-center" });
+      return;
+    } else if (password !== confirmPassword) {
+      toast.error('Passwords do not match.', { position: "top-center" });
+      return;
+    }
+
+    // Prepare user data
+    const userData = {
+      email,
+      phone,
+      password
+    };
+
+    try {
+      const response = await fetch('http://localhost:3500/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (response.ok) {
+        toast.success('Registration successful!', { position: "top-center" });
+        
+        setTimeout(() => {
+          navigate("/login");
+        }, 1500);
+        
+        // Reset the form fields
+        setEmail('');
+        setPhone('');
+        setPassword('');
+        setConfirmPassword('');
+      } else {
+        toast.error('Registration failed. Please try again.', { position: "top-center" });
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      toast.error('An error occurred. Please try again.', { position: "top-center" });
+    }
   };
 
   return (
@@ -86,7 +110,6 @@ const RegisterForm = () => {
             className="form-control"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div className="mb-3">
@@ -97,7 +120,6 @@ const RegisterForm = () => {
             className="form-control"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            required
           />
         </div>
         <div className="mb-3">
@@ -108,7 +130,6 @@ const RegisterForm = () => {
             className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         <div className="mb-3">
@@ -119,13 +140,12 @@ const RegisterForm = () => {
             className="form-control"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            required
           />
         </div>
         <button type="submit" className="btn btn-primary w-100">Register</button>
         <div className="text-center mt-3">
           <Link style={{ textDecoration: 'none', color: 'black', fontWeight: 'bold' }} to="/login">
-            Already have a account?
+            Already have an account?
           </Link>
         </div>
       </form>

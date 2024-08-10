@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Curdop() {
     const [products, setProducts] = useState([]);
@@ -10,41 +11,50 @@ function Curdop() {
     const [unitPrice, setUnitPrice] = useState(0);
     const [productImage, setProductImage] = useState("");
     const [selectedProductId, setSelectedProductId] = useState(null);
-    const [editMode, setEditMode] = useState(false); // Flag to indicate edit mode
+    const [editMode, setEditMode] = useState(false);
 
     useEffect(() => {
         fetchData();
-    }, []); // Fetch product data when the component mounts
+    }, []);
 
     function fetchData() {
         axios.get("http://localhost:3500/products")
             .then((res) => {
                 setProducts(res.data);
+            })
+            .catch(() => {
+                toast.error("Error fetching products!");
             });
     }
 
     function addProduct() {
         const newProduct = {
-            productName: productName,
-            category: category,
-            description: description,
-            unitPrice: unitPrice,
-            productImage: productImage
+            productName,
+            category,
+            description,
+            unitPrice,
+            productImage
         };
 
         axios.post("http://localhost:3500/products", newProduct)
             .then(() => {
-                alert("New product added successfully!");
+                toast.success("New product added successfully!");
                 clearFields();
                 fetchData();
+            })
+            .catch(() => {
+                toast.error("Failed to add product!");
             });
     }
 
     function deleteProduct(id) {
         axios.delete(`http://localhost:3500/products/${id}`)
             .then(() => {
-                alert("Product deleted successfully!");
+                toast.success("Product deleted successfully!");
                 fetchData();
+            })
+            .catch(() => {
+                toast.error("Failed to delete product!");
             });
     }
 
@@ -57,26 +67,29 @@ function Curdop() {
             setUnitPrice(selectedProduct.unitPrice);
             setProductImage(selectedProduct.productImage);
             setSelectedProductId(id);
-            setEditMode(true); // Set edit mode to true
+            setEditMode(true);
         }
     }
 
     function updateProduct() {
         const updatedProduct = {
-            productName: productName,
-            category: category,
-            description: description,
-            unitPrice: unitPrice,
-            productImage: productImage
+            productName,
+            category,
+            description,
+            unitPrice,
+            productImage
         };
 
         axios.put(`http://localhost:3500/products/${selectedProductId}`, updatedProduct)
             .then(() => {
-                alert("Product updated successfully!");
+                toast.success("Product updated successfully!");
                 clearFields();
-                setEditMode(false); // Reset edit mode to false
+                setEditMode(false);
                 setSelectedProductId(null);
                 fetchData();
+            })
+            .catch(() => {
+                toast.error("Failed to update product!");
             });
     }
 
@@ -88,7 +101,7 @@ function Curdop() {
         setProductImage("");
     }
 
-    const productRows = products.map((product, index) =>
+    const productRows = products.map((product, index) => (
         <tr key={index}>
             <td>{product.id}</td>
             <td>{product.productName}</td>
@@ -101,40 +114,51 @@ function Curdop() {
                 <button className="btn btn-outline-danger" onClick={() => deleteProduct(product.id)}>Delete</button>
             </td>
         </tr>
-    );
+    ));
 
     return (
         <>
-            {/* <h3>Server Communication using Axios (CRUD on JSON Server)</h3> */}
-            <hr />
+            <ToastContainer 
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar
+                closeOnClick
+                pauseOnHover
+                draggable
+                theme="colored"
+            />
             
+            <hr />
             <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)} placeholder="Product Name" />
             <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category" />
             <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
             <input type="number" value={unitPrice} onChange={(e) => setUnitPrice(e.target.value)} placeholder="Unit Price" />
             <input type="text" value={productImage} onChange={(e) => setProductImage(e.target.value)} placeholder="Product Image URL" />
-            {editMode ? <button className="btn-btn-outline-info " onClick={updateProduct}>Update Product</button> : <button className="btn btn-outline-success " onClick={addProduct}>Add Product</button>}
+            {editMode ? 
+                <button className="btn btn-outline-info" onClick={updateProduct}>Update Product</button> 
+                : 
+                <button className="btn btn-outline-success" onClick={addProduct}>Add Product</button>
+            }
             <hr />
 
             <div className="table-responsive">
-    <table className="table table-bordered" style={{ width: "100%" }}>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Product Name</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Unit Price</th>
-                <th>Product Image</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {productRows}
-        </tbody>
-    </table>
-</div>
-
+                <table className="table table-bordered" style={{ width: "100%" }}>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Unit Price</th>
+                            <th>Product Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {productRows}
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 }
